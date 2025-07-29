@@ -1,5 +1,6 @@
-import { Theme, Card } from '@radix-ui/themes';
+import { Theme, Box } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
+import Intro from './components/intro';
 
 function App() {
   return (
@@ -10,51 +11,68 @@ function App() {
             {/* Mobile layout - single column with scroll */}
             <div className="md:hidden h-full overflow-y-auto">
               <div className="grid gap-2 grid-cols-1">
-                <Card className="bg-red-500 min-h-[200px]" />
-                <Card className="bg-green-500 min-h-[300px]" />
-                <Card className="bg-blue-500 min-h-[150px]" />
-                <Card className="bg-yellow-500 min-h-[250px]" />
-                <Card className="bg-purple-500 min-h-[200px]" />
+                <Box className="min-h-[200px] bg-red-500 rounded-lg" />
+                <Box className="min-h-[300px] bg-green-500 rounded-lg" />
+                <Box className="min-h-[150px] bg-blue-500 rounded-lg" />
+                <Box className="min-h-[250px] bg-yellow-500 rounded-lg" />
+                <Box className="min-h-[200px] bg-purple-500 rounded-lg" />
               </div>
             </div>
-            
+
             {/* Desktop layout - two columns */}
-            <div 
+            <div
               className="hidden md:grid h-full gap-4"
               style={{
                 gridTemplateColumns: '1fr 1.2fr',
                 gridTemplateRows: 'repeat(10, 1fr)',
-                gridAutoFlow: 'column'
+                gridAutoFlow: 'column',
               }}
             >
               {/* Left column items */}
-              <Card style={{ 
-                gridRow: 'span 3', 
-                backgroundColor: 'var(--gray-1)', 
-                opacity: 0.6,
-                backdropFilter: 'blur(8px)' }} />
-              <Card style={{ 
-                gridRow: 'span 2', 
-                backgroundColor: 'var(--gray-1)', 
-                opacity: 0.6,
-                backdropFilter: 'blur(8px)' }} />
-              <Card style={{ 
-                gridRow: 'span 5', 
-                backgroundColor: 'var(--gray-1)', 
-                opacity: 0.6,
-                backdropFilter: 'blur(8px)' }} />
-              
+              <Box
+                className="rounded-lg"
+                style={{
+                  gridRow: 'span 3',
+                  backgroundColor: '#eeeeee',
+                  backdropFilter: 'blur(8px)',
+                }}
+              >
+                <Intro />
+              </Box>
+              <Box
+                className="rounded-lg"
+                style={{
+                  gridRow: 'span 2',
+                  backgroundColor: '#eeeeee',
+                  backdropFilter: 'blur(8px)',
+                }}
+              />
+              <Box
+                className="rounded-lg"
+                style={{
+                  gridRow: 'span 5',
+                  backgroundColor: '#eeeeee',
+                  backdropFilter: 'blur(8px)',
+                }}
+              />
+
               {/* Right column items */}
-              <Card style={{ 
-                gridRow: 'span 7', 
-                backgroundColor: 'var(--gray-1)', 
-                opacity: 0.6,
-                backdropFilter: 'blur(8px)' }} />
-              <Card style={{ 
-                gridRow: 'span 3', 
-                backgroundColor: 'var(--gray-1)', 
-                opacity: 0.6,
-                backdropFilter: 'blur(8px)' }} />
+              <Box
+                className="rounded-lg"
+                style={{
+                  gridRow: 'span 7',
+                  backgroundColor: '#eeeeee',
+                  backdropFilter: 'blur(8px)',
+                }}
+              />
+              <Box
+                className="rounded-lg"
+                style={{
+                  gridRow: 'span 3',
+                  backgroundColor: '#eeeeee',
+                  backdropFilter: 'blur(8px)',
+                }}
+              />
             </div>
           </div>
         </main>
@@ -62,6 +80,5 @@ function App() {
     </Theme>
   );
 }
-
 
 export default App;

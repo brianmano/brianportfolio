@@ -28,14 +28,37 @@ main {
 }
 
 /* Specifically target the root container */
-body > div:first-child,
+/* body > div:first-child,
 #root {
   background: linear-gradient(135deg, #1a0a0a 0%, #2d1114 25%, #4a1d2a 50%, #1f0f1a 75%, #0a0608 100%) !important;
   background-attachment: fixed !important;
   min-height: 100vh !important;
+} */
+
+/* body > div:first-child,
+#root {
+background: radial-gradient(circle at 20% 30%, #8b1e1e 0%, transparent 40%),
+            radial-gradient(circle at 70% 50%, #d43c2e 0%, transparent 35%),
+            radial-gradient(circle at 40% 80%, #4a1e1e 0%, transparent 50%),
+            radial-gradient(circle at 60% 20%, #5c1c1c 0%, transparent 45%),
+            #1a0a0a !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+} */
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: white !important;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
+.no-border-card[data-theme] {
+  border: none !important;
+  box-shadow: none !important;
+}
+
