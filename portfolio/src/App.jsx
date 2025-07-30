@@ -1,6 +1,10 @@
 import { Theme, Box } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
 import Intro from './components/intro';
+import Education from './components/education';
+import Experience from './components/experience';
+import Projects from './components/projects';
+import TechStack from './components/techstack';
 
 function App() {
   return (
@@ -9,15 +13,63 @@ function App() {
         <main className="flex-grow overflow-hidden p-4">
           <div className="h-full">
             {/* Mobile layout - single column with scroll */}
-            <div className="md:hidden h-full overflow-y-auto">
-              <div className="grid gap-2 grid-cols-1">
-                <Box className="min-h-[200px] bg-red-500 rounded-lg" />
-                <Box className="min-h-[300px] bg-green-500 rounded-lg" />
-                <Box className="min-h-[150px] bg-blue-500 rounded-lg" />
-                <Box className="min-h-[250px] bg-yellow-500 rounded-lg" />
-                <Box className="min-h-[200px] bg-purple-500 rounded-lg" />
-              </div>
+          {/* Mobile layout - single column with scroll */}
+          <div className="md:hidden h-full overflow-y-auto">
+            <div className="grid gap-4 grid-cols-1 p-2">
+              <Box
+                className="rounded-lg"
+                style={{
+                  minHeight: '200px',
+                  backgroundColor: '#eeeeee',
+                  backdropFilter: 'blur(8px)',
+                }}
+              >
+                <Intro />
+              </Box>
+              <Box
+                className="rounded-lg"
+                style={{
+                  minHeight: '100px',
+                  backgroundColor: '#eeeeee',
+                  backdropFilter: 'blur(8px)',
+                }}
+              >
+                <Education />
+              </Box>
+              <Box
+                className="rounded-lg"
+                style={{
+                  minHeight: '150px',
+                  backgroundColor: '#eeeeee',
+                  backdropFilter: 'blur(8px)',
+                }}
+              >
+                <Experience />
+              </Box>
+              <Box
+                className="rounded-lg"
+                style={{
+                  minHeight: '150px',
+                  maxHeight: '600px',
+                  backgroundColor: '#eeeeee',
+                  backdropFilter: 'blur(8px)',
+                }}
+              >
+                <Projects />
+              </Box>
+              <Box
+                className="rounded-lg"
+                style={{
+                  minHeight: '200px',
+                  backgroundColor: '#eeeeee',
+                  backdropFilter: 'blur(8px)',
+                }}
+              >
+                <TechStack />
+              </Box>
             </div>
+          </div>
+
 
             {/* Desktop layout - two columns */}
             <div
@@ -46,7 +98,9 @@ function App() {
                   backgroundColor: '#eeeeee',
                   backdropFilter: 'blur(8px)',
                 }}
-              />
+              >
+                <Education/>
+              </Box>
               <Box
                 className="rounded-lg"
                 style={{
@@ -54,7 +108,9 @@ function App() {
                   backgroundColor: '#eeeeee',
                   backdropFilter: 'blur(8px)',
                 }}
-              />
+              >
+                <Experience/>
+                </Box>
 
               {/* Right column items */}
               <Box
@@ -64,7 +120,9 @@ function App() {
                   backgroundColor: '#eeeeee',
                   backdropFilter: 'blur(8px)',
                 }}
-              />
+              >
+                <Projects/>
+                </Box>
               <Box
                 className="rounded-lg"
                 style={{
@@ -72,7 +130,9 @@ function App() {
                   backgroundColor: '#eeeeee',
                   backdropFilter: 'blur(8px)',
                 }}
-              />
+              >
+                <TechStack/>
+              </Box>
             </div>
           </div>
         </main>

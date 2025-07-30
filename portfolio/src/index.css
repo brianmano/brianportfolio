@@ -62,3 +62,24 @@ h1 {
   box-shadow: none !important;
 }
 
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.custom-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 3px;
+}
+
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #aaa transparent;
+}
