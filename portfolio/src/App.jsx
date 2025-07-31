@@ -60,7 +60,7 @@ function App() {
               <Box
                 className="rounded-lg"
                 style={{
-                  minHeight: '200px',
+                  minHeight: '300px',
                   backgroundColor: '#eeeeee',
                   backdropFilter: 'blur(8px)',
                 }}
@@ -76,7 +76,7 @@ function App() {
               className="hidden md:grid h-full gap-4"
               style={{
                 gridTemplateColumns: '1fr 1.2fr',
-                gridTemplateRows: 'repeat(10, 1fr)',
+                gridTemplateRows: 'repeat(16, 1fr)',
                 gridAutoFlow: 'column',
               }}
             >
@@ -84,7 +84,7 @@ function App() {
               <Box
                 className="rounded-lg"
                 style={{
-                  gridRow: 'span 3',
+                  gridRow: 'span 5',
                   backgroundColor: '#eeeeee',
                   backdropFilter: 'blur(8px)',
                 }}
@@ -94,7 +94,7 @@ function App() {
               <Box
                 className="rounded-lg"
                 style={{
-                  gridRow: 'span 2',
+                  gridRow: 'span 3',
                   backgroundColor: '#eeeeee',
                   backdropFilter: 'blur(8px)',
                 }}
@@ -104,7 +104,7 @@ function App() {
               <Box
                 className="rounded-lg"
                 style={{
-                  gridRow: 'span 5',
+                  gridRow: 'span 8',
                   backgroundColor: '#eeeeee',
                   backdropFilter: 'blur(8px)',
                 }}
@@ -116,7 +116,7 @@ function App() {
               <Box
                 className="rounded-lg"
                 style={{
-                  gridRow: 'span 7',
+                  gridRow: 'span 10',
                   backgroundColor: '#eeeeee',
                   backdropFilter: 'blur(8px)',
                 }}
@@ -126,7 +126,7 @@ function App() {
               <Box
                 className="rounded-lg"
                 style={{
-                  gridRow: 'span 3',
+                  gridRow: 'span 6',
                   backgroundColor: '#eeeeee',
                   backdropFilter: 'blur(8px)',
                 }}

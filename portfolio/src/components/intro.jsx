@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Theme, Card, Grid, Badge, Text, Button, Tooltip, Avatar } from '@radix-ui/themes';
 import { SunIcon, GitHubLogoIcon, LinkedInLogoIcon, EnvelopeClosedIcon, RocketIcon } from "@radix-ui/react-icons"
 import '@radix-ui/themes/styles.css';
-import brianImage from '../assets/brian.png';
+import brianImage from '../assets/brian1.png';
 
 const TypingAnimation = ({ texts, typingSpeed = 100, pauseTime = 1500 }) => {
   const [displayedText, setDisplayedText] = useState('');
@@ -73,7 +73,7 @@ const Intro = () => {
           src={brianImage}
           alt="Brian"
           style={{
-            width: 'clamp(8rem, 10vw, 15rem)',
+            width: 'clamp(8rem, 12vw, 18rem)',
             height: 'auto',
             maxWidth: '90%',
             objectFit: 'contain',
@@ -134,9 +134,9 @@ const Intro = () => {
         <Text
           style={{
             fontFamily: 'Inter, system-ui, sans-serif',
-            fontSize: 'clamp(1.4rem, 2.3vw, 3rem)',
+            fontSize: 'clamp(1.4rem, 2.2vw, 3rem)',
             fontWeight: 600,
-            background: 'var(--red-8)',
+            background: 'linear-gradient(135deg, var(--red-5) 0%, var(--red-9) 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             marginTop: '0.4rem',

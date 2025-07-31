@@ -1,8 +1,8 @@
 import { Text, Button, AlertDialog, Flex, Badge } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
 import oilstainlabsimg from '../assets/oilstainlabscfd.jpg';
-import fsae from '../assets/fsae.jpg';
-import lyriq from '../assets/lyriq.jpg';
+import fsae from '../assets/fsae1.png';
+import lyriq from '../assets/lyriq1.jpg';
 import scalar from '../assets/scalar1.jpg';
 import leetbuddy from '../assets/leetbuddy.png';
 import heatsink from '../assets/heatsink.png';
@@ -27,13 +27,13 @@ const projects = [
     description:
       'Led the development of a scalable real-time race telemetry platform, including strreaming processing data pipelines, cloud storage, customizable dashboards, and plug-n-play hardware & wiring harnesses.',
     tag: 'Python, Kafka, Kubernetes, CANBus, Docker, Azure SQL, MQTT, Quix',
-    link: 'https://www.scalarperformance.com/'
+    link: 'https://drive.google.com/file/d/1Awff38ZsXIIIJX95C6_uSioEuL-ADvmQ/view?usp=sharing/'
   },
   {
     title: 'Cadillac Lyriq Aero Package',
     image: lyriq,
     description:
-      'Designed aero components, including a new rear wing and validated drag reduction through CFD simulations. Developed automation scripts for pre and post processing of the CFD workflow for increased time efficiency.',
+      'Designed aero components, including a new rear wing and validated drag reduction through CFD simulations, developing automation scripts to increase efficiency in the CFD workflow.',
     tag: 'Siemens NX, Ansys Fluent, CFD, Python, Aerodynamic Design',
     link: 'https://www.macecocar.ca/'
   },
@@ -51,7 +51,7 @@ const projects = [
     description:
       'Designed and integrated an internal thermal system, decreasing ambient temperatures of rear computer modules. Validated through thermal fluid studies.',
     tag: 'Siemens NX, Thermal Fluids',
-    link: 'https://www.macecocar.ca/'
+    link: 'https://drive.google.com/file/d/1MycHKIV_fjeRdH1LXnZ22IIs5Ie6UfUq/view?usp=sharing'
   },
 
         {
@@ -60,13 +60,13 @@ const projects = [
     description:
       'Designed a custom CPU Heatsink using natural convection to reduce maximum temperatures compared to a factory design by 33%.',
     tag: 'Fusion360, Thermal Analysis, Material Design, Manufacturing',
-    link: 'https://www.macecocar.ca/', 
+    link: 'https://drive.google.com/file/d/1i6HKiGWrDh3BUJud11zgsxfElHyp_LHL/view?usp=sharing', 
   },
     {
     title: 'LeetBuddy',
     image: leetbuddy,
     description:
-      'Developed a Google Chrome Extension (3000+ active users) leveraging Generative AI to provide real-time, context-aware support for LeetCode problems to streamline and personalize software interview preparation and learning.',
+      'Developed a Google Chrome Extension (3000+ active users) leveraging Generative AI to provide real-time, context-aware support for LeetCode problems to personalize software interview preparation.',
     tag: 'React, Tailwind, Express.js, Generative AI, Redis, Docker',
     link: 'https://chromewebstore.google.com/detail/leetbuddy-your-ai-powered/nlemdecocfoaimdbfgpilfgdmcllhphn'
   },
@@ -124,26 +124,24 @@ const Projects = () => {
         {projects.map((project, index) => (
           <AlertDialog.Root key={index}>
             <AlertDialog.Trigger asChild>
-              <div
+                <div
                 className="hover-scale"
                 style={{
-                  position: 'relative',
-                  background: sharedBackground,
-                  color: sharedTextColor,
-                  borderRadius: '1rem',
-                  overflow: 'hidden',
-                  cursor: 'pointer',
-                  display: 'grid',
-                  gridTemplateRows: 'auto auto',
-                  width: '100%',
-                  height: '16vw',
-                  minHeight: '200px',
-                  gap: '0.5rem',
-                  padding: '1rem',
-                  boxSizing: 'border-box',
-                  fontFamily: 'Inter, system-ui, sans-serif',
+                    position: 'relative',
+                    background: sharedBackground,
+                    color: sharedTextColor,
+                    borderRadius: '1rem',
+                    cursor: 'pointer',
+                    display: 'grid',
+                    gridTemplateRows: 'auto auto auto', // Allow rows to auto size
+                    width: '100%',
+                    minHeight: '240px', // Increased minHeight
+                    padding: '1rem',
+                    gap: '0.5rem',
+                    fontFamily: 'Inter, system-ui, sans-serif',
+                    boxSizing: 'border-box',
                 }}
-              >
+                >
                 {/* Top Row: Image + Title & Description */}
                 <div
                   style={{
@@ -153,15 +151,15 @@ const Projects = () => {
                     overflow: 'hidden',
                   }}
                 >
-                  <div
+                    <div
                     style={{
-                      width: '30%',
-                      height: '100%',
-                      borderRadius: '0.75rem',
-                      overflow: 'hidden',
-                      flexShrink: 0,
+                        width: '40%',
+                        aspectRatio: '1.4',
+                        borderRadius: '0.75rem',
+                        overflow: 'hidden',
+                        flexShrink: 0,
                     }}
-                  >
+                    >
                     <img
                       src={project.image}
                       alt={project.title}
@@ -183,30 +181,32 @@ const Projects = () => {
                       overflow: 'hidden',
                     }}
                   >
-                    <Text
-                    as="div"
-                    style={{
-                        fontSize: 'clamp(0.7rem, 1vw, 2rem)',
-                        fontWeight: 700,
-                        lineHeight: 1.3,
-                        overflowWrap: 'break-word',
-                        wordBreak: 'break-word',
-                    }}
-                    >
-                    {project.title}
-                    </Text>
-                    <Text
-                    as="div"
-                    style={{
-                        fontSize: 'clamp(0.5rem, 0.7vw, 2rem)',
-                        opacity: 0.85,
-                        marginTop: '0.25rem',
-                        lineHeight: 1.4,
-                        wordBreak: 'break-word',
-                    }}
-                    >
-                    {project.description}
-                    </Text>
+                <Text
+                as="div"
+                style={{
+                    fontSize: 'clamp(0.3rem, 0.9vw, 1.25rem)', // Reasonable clamp
+                    fontWeight: 700,
+                    lineHeight: 1.4, // More breathing room
+                    overflowWrap: 'break-word',
+                    wordBreak: 'break-word',
+                }}
+                >
+                {project.title}
+                </Text>
+
+                <Text
+                as="div"
+                style={{
+                    fontSize: 'clamp(0.4rem, 0.6vw, 1rem)', // Adjusted clamp
+                    opacity: 0.85,
+                    marginTop: '0.25rem',
+                    lineHeight: 1.5,
+                    wordBreak: 'break-word',
+                }}
+                >
+                {project.description}
+                </Text>
+
                   </div>
                 </div>
 
@@ -226,7 +226,7 @@ const Projects = () => {
                     variant="soft"
                     style={{
                         fontFamily: 'Inter, system-ui, sans-serif',
-                        fontSize: 'clamp(0.5rem, 0.6vw, 2rem)',
+                        fontSize: 'clamp(0.4rem, 0.6vw, 2rem)',
                         color: 'var(--red-11)',
                         fontWeight: 300,
                     }}
