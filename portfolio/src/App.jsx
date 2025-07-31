@@ -1,75 +1,100 @@
 import { Theme, Box } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
+import { motion } from 'framer-motion';
 import Intro from './components/intro';
 import Education from './components/education';
 import Experience from './components/experience';
 import Projects from './components/projects';
 import TechStack from './components/techstack';
 
+const MotionBox = motion(Box);
+
 function App() {
   return (
     <Theme accentColor="red" appearance="dark" radius="large">
-      <div className="h-screen w-screen flex flex-col overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 2, ease: 'easeOut' }}
+        className="h-screen w-screen flex flex-col overflow-hidden"
+      >
         <main className="flex-grow overflow-hidden p-4">
           <div className="h-full">
             {/* Mobile layout - single column with scroll */}
-          {/* Mobile layout - single column with scroll */}
-          <div className="md:hidden h-full overflow-y-auto">
-            <div className="grid gap-4 grid-cols-1 p-2">
-              <Box
-                className="rounded-lg"
-                style={{
-                  minHeight: '200px',
-                  backgroundColor: '#eeeeee',
-                  backdropFilter: 'blur(8px)',
-                }}
-              >
-                <Intro />
-              </Box>
-              <Box
-                className="rounded-lg"
-                style={{
-                  minHeight: '100px',
-                  backgroundColor: '#eeeeee',
-                  backdropFilter: 'blur(8px)',
-                }}
-              >
-                <Education />
-              </Box>
-              <Box
-                className="rounded-lg"
-                style={{
-                  minHeight: '150px',
-                  backgroundColor: '#eeeeee',
-                  backdropFilter: 'blur(8px)',
-                }}
-              >
-                <Experience />
-              </Box>
-              <Box
-                className="rounded-lg"
-                style={{
-                  minHeight: '150px',
-                  maxHeight: '600px',
-                  backgroundColor: '#eeeeee',
-                  backdropFilter: 'blur(8px)',
-                }}
-              >
-                <Projects />
-              </Box>
-              <Box
-                className="rounded-lg"
-                style={{
-                  minHeight: '300px',
-                  backgroundColor: '#eeeeee',
-                  backdropFilter: 'blur(8px)',
-                }}
-              >
-                <TechStack />
-              </Box>
-            </div>
-          </div>
+            <div className="md:hidden h-full overflow-y-auto">
+              <div className="grid gap-4 grid-cols-1 p-2">
+                <MotionBox
+                  className="rounded-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1, duration: 0.5 }}
+                  style={{
+                    minHeight: '200px',
+                    backgroundColor: '#eeeeee',
+                    backdropFilter: 'blur(8px)',
+                  }}
+                >
+                  <Intro />
+                </MotionBox>
 
+                <MotionBox
+                  className="rounded-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2, duration: 0.5 }}
+                  style={{
+                    minHeight: '100px',
+                    backgroundColor: '#eeeeee',
+                    backdropFilter: 'blur(8px)',
+                  }}
+                >
+                  <Education />
+                </MotionBox>
+
+                <MotionBox
+                  className="rounded-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3, duration: 0.5 }}
+                  style={{
+                    minHeight: '150px',
+                    backgroundColor: '#eeeeee',
+                    backdropFilter: 'blur(8px)',
+                  }}
+                >
+                  <Experience />
+                </MotionBox>
+
+                <MotionBox
+                  className="rounded-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.5 }}
+                  style={{
+                    minHeight: '150px',
+                    maxHeight: '600px',
+                    backgroundColor: '#eeeeee',
+                    backdropFilter: 'blur(8px)',
+                  }}
+                >
+                  <Projects />
+                </MotionBox>
+
+                <MotionBox
+                  className="rounded-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 0.5 }}
+                  style={{
+                    minHeight: '300px',
+                    backgroundColor: '#eeeeee',
+                    backdropFilter: 'blur(8px)',
+                  }}
+                >
+                  <TechStack />
+                </MotionBox>
+              </div>
+            </div>
 
             {/* Desktop layout - two columns */}
             <div
@@ -80,9 +105,11 @@ function App() {
                 gridAutoFlow: 'column',
               }}
             >
-              {/* Left column items */}
-              <Box
+              <MotionBox
                 className="rounded-lg"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1, duration: 0.5 }}
                 style={{
                   gridRow: 'span 5',
                   backgroundColor: '#eeeeee',
@@ -90,53 +117,67 @@ function App() {
                 }}
               >
                 <Intro />
-              </Box>
-              <Box
+              </MotionBox>
+
+              <MotionBox
                 className="rounded-lg"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
                 style={{
                   gridRow: 'span 3',
                   backgroundColor: '#eeeeee',
                   backdropFilter: 'blur(8px)',
                 }}
               >
-                <Education/>
-              </Box>
-              <Box
+                <Education />
+              </MotionBox>
+
+              <MotionBox
                 className="rounded-lg"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
                 style={{
                   gridRow: 'span 8',
                   backgroundColor: '#eeeeee',
                   backdropFilter: 'blur(8px)',
                 }}
               >
-                <Experience/>
-                </Box>
+                <Experience />
+              </MotionBox>
 
-              {/* Right column items */}
-              <Box
+              <MotionBox
                 className="rounded-lg"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
                 style={{
                   gridRow: 'span 10',
                   backgroundColor: '#eeeeee',
                   backdropFilter: 'blur(8px)',
                 }}
               >
-                <Projects/>
-                </Box>
-              <Box
+                <Projects />
+              </MotionBox>
+
+              <MotionBox
                 className="rounded-lg"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
                 style={{
                   gridRow: 'span 6',
                   backgroundColor: '#eeeeee',
                   backdropFilter: 'blur(8px)',
                 }}
               >
-                <TechStack/>
-              </Box>
+                <TechStack />
+              </MotionBox>
             </div>
           </div>
         </main>
-      </div>
+      </motion.div>
     </Theme>
   );
 }
