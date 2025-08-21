@@ -1,12 +1,13 @@
 import { Text, Button, AlertDialog, Flex, Badge } from '@radix-ui/themes';
 import '@radix-ui/themes/styles.css';
-import oilstainlabsimg from '../assets/oilstainlabscfd.jpg';
+import oilstainlabsimg from '../assets/oilstainlabscfd.png';
 import fsae from '../assets/fsae1.png';
-import lyriq from '../assets/lyriq1.jpg';
-import scalar from '../assets/scalar1.jpg';
+import lyriq from '../assets/lyriq1.png';
+import lyriqcool from '../assets/lyriqcool.png';
+import scalar from '../assets/scalar1.png';
 import leetbuddy from '../assets/leetbuddy.png';
 import heatsink from '../assets/heatsink.png';
-import pacemaker from '../assets/pacemaker.jpg';
+import pacemaker from '../assets/pacemaker.png';
 import { DoubleArrowRightIcon, LayersIcon } from '@radix-ui/react-icons';
 
 
@@ -15,17 +16,17 @@ const sharedTextColor = 'white';
 
 const projects = [
 {
-  title: 'HF-11 Underbody Design',
+  title: 'HF-11 Underbody Aero Design',
   image: oilstainlabsimg,
-  description: 'Designed and optimized underbody aerodynamics of the HF-11 Hypercar through venturi channels using CFD and wind tunnel validation.',
+  description: 'Designed and optimized underbody aerodynamics of the HF-11 Hypercar with venturi channels/flaps using CFD and wind tunnel validation.',
   tag: 'Rhino, Ansys Fluent, CFD, Aerodynamic Design',
   link: 'https://www.oilstainlab.com/', 
 },
     {
-    title: 'Race Telemetry Platform',
+    title: 'SCR1 Race Telemetry Platform',
     image: scalar,
     description:
-      'Led the development of a scalable real-time race telemetry platform, including strreaming processing data pipelines, cloud storage, customizable dashboards, and plug-n-play hardware & wiring harnesses.',
+      'Developed a real-time telemetry platform, including streaming processing pipelines, cloud storage, customizable dashboards, and plug-n-play hardware & wiring harnesses.',
     tag: 'Python, Kafka, Kubernetes, CANBus, Docker, Azure SQL, MQTT, Quix',
     link: 'https://drive.google.com/file/d/1Awff38ZsXIIIJX95C6_uSioEuL-ADvmQ/view?usp=sharing/'
   },
@@ -47,7 +48,7 @@ const projects = [
   },
     {
     title: 'Cadillac Lyriq Internal Thermal System',
-    image: lyriq,
+    image: lyriqcool,
     description:
       'Designed and integrated an internal thermal system, decreasing ambient temperatures of rear computer modules. Validated through thermal fluid studies.',
     tag: 'Siemens NX, Thermal Fluids',
@@ -184,7 +185,7 @@ const Projects = () => {
                 <Text
                 as="div"
                 style={{
-                    fontSize: 'clamp(0.3rem, 0.9vw, 1.25rem)', // Reasonable clamp
+                    fontSize: 'clamp(0.3rem, 0.8vw, 1.25rem)', // Reasonable clamp
                     fontWeight: 700,
                     lineHeight: 1.4, // More breathing room
                     overflowWrap: 'break-word',
