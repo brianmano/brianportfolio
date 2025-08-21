@@ -34,7 +34,7 @@ const projects = [
     title: 'Cadillac Lyriq Aero Package',
     image: lyriq,
     description:
-      'Designed aero components, including a new rear wing and validated drag reduction through CFD simulations, developing automation scripts to increase efficiency in the CFD workflow.',
+      'Designed aero components and validated drag reduction through CFD. Developed automation scripts to increase efficiency in the CFD workflow.',
     tag: 'Siemens NX, Ansys Fluent, CFD, Python, Aerodynamic Design',
     link: 'https://www.macecocar.ca/'
   },
