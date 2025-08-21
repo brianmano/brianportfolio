@@ -19,7 +19,7 @@ const TechStack = () => {
     paddingBottom: '0.75rem',
   };
 
-    const badgeStyle = {
+  const badgeStyle = {
     fontFamily: 'Inter, system-ui, sans-serif',
     fontWeight: 500,
     fontSize: 'clamp(0.3rem, 0.6vw, 6rem)',
@@ -33,18 +33,19 @@ const TechStack = () => {
     boxShadow: '0 1px 2px rgba(255, 255, 255, 0.15), 0 4px 8px rgba(0, 0, 0, 0.4)',
     textAlign: 'center',
     display: 'inline-block',
-    };
+  };
 
   const listStyle = {
-    listStyleType: 'disc',
-    paddingLeft: '1rem',
-    marginTop: '0.5rem',
-    columnCount: 2,      // 2 vertical columns
-    columnGap: '1.1rem',   // gap between columns
+    listStyleType: 'none',      
+    paddingLeft: '0',           
+    marginTop: '0.1rem',
+    display: 'flex',            
+    flexWrap: 'wrap',           
+    gap: '0.25rem',              
   };
 
   const badgeFixedWidth = {
-    width: 'clamp(0.8rem, 7vw, 10rem)',       // fixed width for uniform badges
+    width: 'clamp(3rem, 7vw, 12rem)', 
     display: 'inline-block',
     textAlign: 'center',
     whiteSpace: 'normal',
@@ -79,23 +80,12 @@ const TechStack = () => {
         </Text>
         <ul style={listStyle}>
           {[
-            'Ansys Fluent',
-            'OpenFOAM',
-            'Altair HyperMesh',
-            'Altair MotionView',
-            'Siemens NX',
-            'Rhino',
-            'CATIA',
-            'Paraview',
-            'Fusion 360',
-            'Inventor',
-            'SolidWorks',
+            'Ansys Fluent', 'OpenFOAM', 'Altair HyperMesh', 'Altair MotionView',
+            'Siemens NX', 'Rhino', 'CATIA', 'Paraview', 'Fusion 360', 'Inventor', 'SolidWorks',
           ].map((tech, idx) => (
-            <li key={idx} style={{ marginBottom: 'clamp(0.1rem, 0.2vw, 4rem)' }}>
-              <Badge
-                style={{ ...badgeStyle, ...badgeFixedWidth }}
-                variant="soft"
-              >
+            // The 'gap' property on <ul> now handles spacing, so marginBottom is removed.
+            <li key={idx}>
+              <Badge style={{ ...badgeStyle, ...badgeFixedWidth }} variant="soft">
                 {tech}
               </Badge>
             </li>
@@ -121,24 +111,11 @@ const TechStack = () => {
         </Text>
         <ul style={listStyle}>
           {[
-            'Python',
-            'C',
-            'C#',
-            'C++',
-            'Java',
-            'CSS',
-            'HTML',
-            'JavaScript',
-            'TypeScript',
-            'SQL',
-            'Matlab',
-            'VBA',
+            'Python', 'C', 'C#', 'C++', 'Java', 'CSS', 'HTML', 'JavaScript',
+            'TypeScript', 'SQL', 'Matlab', 'VBA',
           ].map((lang, idx) => (
-            <li key={idx} style={{ marginBottom: 'clamp(0.1rem, 0.2vw, 4rem)' }}>
-              <Badge
-                style={{ ...badgeStyle, ...badgeFixedWidth }}
-                variant="soft"
-              >
+            <li key={idx}>
+              <Badge style={{ ...badgeStyle, ...badgeFixedWidth }} variant="soft">
                 {lang}
               </Badge>
             </li>
@@ -164,25 +141,11 @@ const TechStack = () => {
         </Text>
         <ul style={listStyle}>
           {[
-            'AVL',
-            'CANape',
-            '.NET',
-            'Matlab Simulink',
-            'Apache Kafka',
-            'AWS (S3)',
-            'Azure',
-            'CANBus',
-            'Docker',
-            'Git',
-            'Kubernetes',
-            'Linux',
-            'WPF',
+            'AVL', 'CANape', '.NET', 'Matlab Simulink', 'Apache Kafka', 'AWS (S3)',
+            'Azure', 'CANBus', 'Docker', 'Git', 'Kubernetes', 'Linux', 'WPF',
           ].map((tool, idx) => (
-            <li key={idx} style={{ marginBottom: 'clamp(0.1rem, 0.2vw, 4rem)' }}>
-              <Badge
-                style={{ ...badgeStyle, ...badgeFixedWidth }}
-                variant="soft"
-              >
+            <li key={idx}>
+              <Badge style={{ ...badgeStyle, ...badgeFixedWidth }} variant="soft">
                 {tool}
               </Badge>
             </li>
