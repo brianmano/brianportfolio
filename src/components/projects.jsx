@@ -20,7 +20,7 @@ const projects = [
   image: oilstainlabsimg,
   description: 'Designed and optimized underbody aerodynamics of the HF-11 Hypercar with venturi channels/flaps using CFD and wind tunnel validation.',
   tag: 'Rhino, Ansys Fluent, CFD, Aerodynamic Design',
-  link: 'https://www.oilstainlab.com/', 
+  link: 'https://drive.google.com/file/d/1BtjN2IYbhY-BlZYUS-iY8AX5fj5Cyl-W/view?usp=sharing', 
 },
     {
     title: 'SCR1 Race Telemetry Platform',
