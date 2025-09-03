@@ -4,6 +4,7 @@ import oilstainlabsimg from '../assets/oilstainlabscfd.png';
 import fsae from '../assets/fsae1.png';
 import lyriq from '../assets/lyriq1.png';
 import lyriqcool from '../assets/lyriqcool.png';
+import lyriqcals from '../assets/lyriqcals.png';
 import scalar from '../assets/scalar1.png';
 import leetbuddy from '../assets/leetbuddy.png';
 import heatsink from '../assets/heatsink.png';
@@ -39,7 +40,7 @@ const projects = [
     link: 'https://www.macecocar.ca/'
   },
   {
-    title: 'FSAE Aero Genetic Algorithm',
+    title: 'Formula Student Aero Genetic Algorithm',
     image: fsae,
     description:
       'Developing genetic algorithms to automate and optimize aero component setups, including AoA, position, and scale.',
@@ -53,6 +54,14 @@ const projects = [
       'Designed and integrated an internal thermal system, decreasing ambient temperatures of rear computer modules. Validated through thermal fluid studies.',
     tag: 'Siemens NX, Thermal Fluids',
     link: 'https://drive.google.com/file/d/1MycHKIV_fjeRdH1LXnZ22IIs5Ie6UfUq/view?usp=sharing'
+  },
+      {
+    title: 'Cadillac Lyriq Control System Validation & Fault Analysis',
+    image: lyriqcals,
+    description:
+      'Contributed towards a root-cause analysis for low RPM torque bogging of an EV motor using a data-driven process to prove control system accuracy and isolated third-part defects.',
+    tag: 'Matlab Simulink, CANApe, AVL',
+    link: 'https://www.macecocar.ca/'
   },
 
         {
@@ -320,6 +329,7 @@ const Projects = () => {
                     }}
                 >
                     <Button
+                    className="project-details-button"
                     style={{
                         background: 'var(--amber-9)',
                         color: 'black',
@@ -329,19 +339,29 @@ const Projects = () => {
                         fontSize: '1rem',           // Larger font
                         alignItems: 'center',
                         fontFamily: 'Inter, system-ui, sans-serif',
+                        transition: 'all 0.3s ease',
+                        cursor: 'pointer',
+                        border: 'none',
+                        borderRadius: '0.5rem',
                     }}
                     >
                     <LayersIcon />
-                        Project Details
+                        Click Here For Project Details
                     </Button>
                 </a>
 
                 <Flex justify="end" mt="auto">
                     <AlertDialog.Cancel>
                     <Button
+                        className="close-button"
                         style={{
                         background: 'var(--red-8)',
                         color: 'white',
+                        transition: 'all 0.3s ease',
+                        cursor: 'pointer',
+                        border: 'none',
+                        borderRadius: '0.5rem',
+                        padding: '0.5rem 1rem',
                         }}
                     >
                         <Text style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Close</Text>
@@ -354,13 +374,43 @@ const Projects = () => {
                         ))}
       </div>
 
-      {/* Hover Scale CSS */}
+      {/* Enhanced CSS with Button Hover Effects */}
         <style>{`
         .hover-scale {
             transition: transform 0.3s ease;
         }
         .hover-scale:hover {
             transform: scale(1.03);
+        }
+
+        /* Project Details Button Hover Effect */
+        .project-details-button:hover {
+            background: var(--amber-10) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-details-button:active {
+            transform: translateY(0px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Close Button Hover Effect */
+        .close-button:hover {
+            background: var(--red-9) !important;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .close-button:active {
+            transform: translateY(0px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Additional subtle animations for icons */
+        .project-details-button:hover svg {
+            transform: translateX(2px);
+            transition: transform 0.2s ease;
         }
 
         /* Responsive grid: 1 column on smaller screens */
