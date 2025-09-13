@@ -158,7 +158,8 @@ const Intro = () => {
           as="div"
         >
           <TypingAnimation
-            texts={['Aerodynamics.', 'Race Telemetry.', 'Vehicle Dynamics.', 'Calibration & Validation.']}
+            // texts={['Aerodynamics.', 'Race Telemetry.', 'Vehicle Dynamics.', 'Calibration & Validation.']}
+            texts={['#affirm f1', '#affirm williams', '#affirm aston', '#affirm rbr']}
             typingSpeed={120}
             pauseTime={1500}
           />
