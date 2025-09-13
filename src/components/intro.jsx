@@ -157,9 +157,10 @@ const Intro = () => {
           }}
           as="div"
         >
+          #affirm
           <TypingAnimation
             // texts={['Aerodynamics.', 'Race Telemetry.', 'Vehicle Dynamics.', 'Calibration & Validation.']}
-            texts={['#affirm f1', '#affirm williams', '#affirm aston', '#affirm rbr']}
+            texts={[' F1 Placement', ' Atlassian Williams Racing', ' Aston Martin Racing', ' Oracle Red Bull Racing']}
             typingSpeed={120}
             pauseTime={1500}
           />
