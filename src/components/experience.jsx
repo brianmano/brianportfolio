@@ -10,7 +10,7 @@ const experiences = [
   {
     title: 'Aerodynamics Design Engineer Intern',
     company: 'Oilstainlab',
-    duration: 'April 2025 – Present',
+    duration: 'April 2025 – September 2025',
     location: 'Remote',
     image: oilstainlabsimg,
     description: [
