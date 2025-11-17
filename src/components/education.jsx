@@ -88,7 +88,7 @@ const Education = () => {
             as="span"
             wrap="pretty"
         >
-            September 2021 - April 2027 (Expected)
+            September 2021 - December 2027 (Expected)
         </Text>
 
         <Text
