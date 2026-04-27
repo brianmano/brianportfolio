@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Theme, Card, Grid, Badge, Text, Button, Tooltip, Avatar } from '@radix-ui/themes';
 import { SunIcon, GitHubLogoIcon, LinkedInLogoIcon, EnvelopeClosedIcon, RocketIcon } from "@radix-ui/react-icons"
 import '@radix-ui/themes/styles.css';
-import brianImage from '../assets/brian1.png';
+import brianImage from '../assets/brianmemoji1.png';
 
 const TypingAnimation = ({ texts, typingSpeed = 100, pauseTime = 1500 }) => {
   const [displayedText, setDisplayedText] = useState('');
@@ -73,7 +73,7 @@ const Intro = () => {
           src={brianImage}
           alt="Brian"
           style={{
-            width: 'clamp(8rem, 12vw, 18rem)',
+            width: 'clamp(8rem, 13vw, 18rem)',
             height: 'auto',
             maxWidth: '90%',
             objectFit: 'contain',
@@ -176,7 +176,7 @@ const Intro = () => {
             backgroundColor: 'transparent',
         }}
         > 
-        <Tooltip content="LinkedIn">
+        <Tooltip content={<span className="social-tooltip">LinkedIn</span>} side="bottom" sideOffset={1}>
             <Button
             asChild
             variant="ghost"
@@ -206,17 +206,11 @@ const Intro = () => {
                 }}
             >
                 <LinkedInLogoIcon 
+                className="social-icon"
                 style={{ 
                     width: 'clamp(2rem, 2.6vw, 3rem)',
                     height: 'clamp(2rem, 2.6vw, 3rem)',
                     color: 'var(--red-10)',
-                    transition: 'all 0.2s ease'
-                }}
-                onMouseEnter={(e) => {
-                    e.target.style.transform = 'scale(1.1)';
-                }}
-                onMouseLeave={(e) => {
-                    e.target.style.transform = 'scale(1)';
                 }}
                 />
             </a>
@@ -233,9 +227,7 @@ const Intro = () => {
             backgroundColor: 'transparent',
         }}
         > 
-        <Tooltip 
-            content="Github"
-        >
+        <Tooltip content={<span className="social-tooltip">Github</span>} side="bottom" sideOffset={1}>
             <Button
             asChild
             variant="ghost"
@@ -265,17 +257,11 @@ const Intro = () => {
                 }}
             >
                 <GitHubLogoIcon 
+                className="social-icon"
                 style={{ 
                     width: 'clamp(2rem, 2.6vw, 3rem)',
                     height: 'clamp(2rem, 2.6vw, 3rem)',
                     color: 'var(--red-10)',
-                    transition: 'all 0.2s ease'
-                }}
-                onMouseEnter={(e) => {
-                    e.target.style.transform = 'scale(1.1)';
-                }}
-                onMouseLeave={(e) => {
-                    e.target.style.transform = 'scale(1)';
                 }}
                 />
             </a>
@@ -292,7 +278,7 @@ const Intro = () => {
             backgroundColor: 'transparent',
         }}
         > 
-        <Tooltip content="Email">
+        <Tooltip content={<span className="social-tooltip">Email</span>} side="bottom" sideOffset={1}>
             <Button
             asChild
             variant="ghost"
@@ -322,17 +308,11 @@ const Intro = () => {
                 }}
             >
                 <EnvelopeClosedIcon 
+                className="social-icon"
                 style={{ 
                     width: 'clamp(2rem, 2.6vw, 3rem)',
                     height: 'clamp(2rem, 2.6vw, 3rem)',
                     color: 'var(--red-10)',
-                    transition: 'all 0.2s ease'
-                }}
-                onMouseEnter={(e) => {
-                    e.target.style.transform = 'scale(1.1)';
-                }}
-                onMouseLeave={(e) => {
-                    e.target.style.transform = 'scale(1)';
                 }}
                 />
             </a>
