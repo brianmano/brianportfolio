@@ -9,6 +9,7 @@ import scalar from '../assets/scalar1.png';
 import leetbuddy from '../assets/leetbuddy.png';
 import heatsink from '../assets/heatsink.png';
 import pacemaker from '../assets/pacemaker.png';
+import ecolift from '../assets/ecolift1.png';
 import { DoubleArrowRightIcon, LayersIcon } from '@radix-ui/react-icons';
 
 
@@ -16,6 +17,7 @@ const sharedBackground = 'linear-gradient(135deg, var(--red-5), var(--red-9))';
 const sharedTextColor = 'white';
 
 const projects = [
+  
 {
   title: 'HF-11 Underbody Aero Design',
   image: oilstainlabsimg,
@@ -55,22 +57,15 @@ const projects = [
     tag: 'Siemens NX, Thermal Fluids',
     link: 'https://drive.google.com/file/d/1MycHKIV_fjeRdH1LXnZ22IIs5Ie6UfUq/view?usp=sharing'
   },
-      {
-    title: 'Cadillac Lyriq Control System Validation & Fault Analysis',
-    image: lyriqcals,
+
+        {
+    title: 'EcoLift Robotic Spotter',
+    image: ecolift,
     description:
-      'Contributed towards a root-cause analysis for low RPM torque bogging of an EV motor using a data-driven process to prove control system accuracy and isolated third-part defects.',
-    tag: 'Matlab Simulink, CANApe, AVL',
-    link: 'https://www.macecocar.ca/'
+      'An automatic robotic spotter that integrates software, electrical, and mechanical components to detect exercising failures and provide safety assistance to the user.',
+    tag: 'SolidWorks, FEA, Manufacturing, Python, React, WebSocket',
+    link: 'https://github.com/luciancheng/EcoLift'
   },
-  //       {
-  //   title: 'EcoLift - Automated Robotic Spotter',
-  //   image: lyriqcals,
-  //   description:
-  //     'Designed and manufactured an automated robotic spotter that detects failure modes in power lifts and assists users to safety.',
-  //   tag: 'SolidWorks, FEA, Manufacturing, Control Systems',
-  //   link: 'https://www.macecocar.ca/'
-  // },
 
         {
     title: 'CPU Heatsink Design',
@@ -87,6 +82,14 @@ const projects = [
       'Developed a Google Chrome Extension (3000+ active users) leveraging Generative AI to provide real-time, context-aware support for LeetCode problems to personalize software interview preparation.',
     tag: 'React, Tailwind, Express.js, Generative AI, Redis, Docker',
     link: 'https://chromewebstore.google.com/detail/leetbuddy-your-ai-powered/nlemdecocfoaimdbfgpilfgdmcllhphn'
+  },
+        {
+    title: 'Cadillac Lyriq Control System Validation & Fault Analysis',
+    image: lyriqcals,
+    description:
+      'Contributed towards a root-cause analysis for low RPM torque bogging of an EV motor using a data-driven process to prove control system accuracy and isolated third-part defects.',
+    tag: 'Matlab Simulink, CANApe, AVL',
+    link: 'https://www.macecocar.ca/'
   },
       {
     title: 'Pacemaker Project',
