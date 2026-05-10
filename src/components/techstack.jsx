@@ -54,7 +54,7 @@ const TechStack = () => {
 
   return (
     <div
-      className="grid gap-2 w-full h-full p-3"
+      className="techgrid grid gap-2 w-full h-full p-3"
       style={{
         gridTemplateColumns: '2fr 2fr 2fr',
         gridTemplateRows: '1fr',
@@ -64,7 +64,7 @@ const TechStack = () => {
     >
       {/* Column 1: Technological Skills */}
       <div style={{ paddingLeft: 'clamp(0.1rem, 1vw, 2rem)' }}>
-        <Text as="div" style={sharedTitleStyle}>
+        <Text className="techstack-heading" as="div" style={sharedTitleStyle}>
           <div
             style={{
               color: 'red',
@@ -85,7 +85,7 @@ const TechStack = () => {
           ].map((tech, idx) => (
             // The 'gap' property on <ul> now handles spacing, so marginBottom is removed.
             <li key={idx}>
-              <Badge style={{ ...badgeStyle, ...badgeFixedWidth }} variant="soft">
+              <Badge className="tech-badge" style={{ ...badgeStyle, ...badgeFixedWidth }} variant="soft">
                 {tech}
               </Badge>
             </li>
@@ -95,7 +95,7 @@ const TechStack = () => {
 
       {/* Column 2: Programming Languages */}
       <div style={{ borderLeft: '1px solid #ccc', paddingLeft: 'clamp(0.1rem, 1vw, 2rem)' }}>
-        <Text as="div" style={sharedTitleStyle}>
+        <Text className="techstack-heading" as="div" style={sharedTitleStyle}>
           <div
             style={{
               color: 'red',
@@ -115,7 +115,7 @@ const TechStack = () => {
             'TypeScript', 'SQL', 'Matlab', 'VBA',
           ].map((lang, idx) => (
             <li key={idx}>
-              <Badge style={{ ...badgeStyle, ...badgeFixedWidth }} variant="soft">
+              <Badge className="tech-badge" style={{ ...badgeStyle, ...badgeFixedWidth }} variant="soft">
                 {lang}
               </Badge>
             </li>
@@ -125,7 +125,7 @@ const TechStack = () => {
 
       {/* Column 3: Tools and Platforms */}
       <div style={{ borderLeft: '1px solid #ccc', paddingLeft: 'clamp(0.1rem, 1vw, 2rem)' }}>
-        <Text as="div" style={sharedTitleStyle}>
+        <Text className="techstack-heading" as="div" style={sharedTitleStyle}>
           <div
             style={{
               color: 'red',
@@ -145,13 +145,41 @@ const TechStack = () => {
             'Azure', 'CANBus', 'Docker', 'Git', 'Kubernetes', 'Linux', 'WPF',
           ].map((tool, idx) => (
             <li key={idx}>
-              <Badge style={{ ...badgeStyle, ...badgeFixedWidth }} variant="soft">
+              <Badge className="tech-badge" style={{ ...badgeStyle, ...badgeFixedWidth }} variant="soft">
                 {tool}
               </Badge>
             </li>
           ))}
         </ul>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .techgrid {
+            grid-template-columns: 1fr !important;
+          }
+          .techgrid > div {
+            border-left: none !important;
+            padding-left: 0 !important;
+            padding-top: 1rem !important;
+          }
+          .techgrid > div:first-child {
+            padding-top: 0 !important;
+          }
+          .techstack-heading {
+            font-size: 1.35rem !important;
+          }
+          .tech-badge {
+            font-size: 0.95rem !important;
+            padding: 0.65rem 0.95rem !important;
+            white-space: nowrap !important;
+            width: auto !important;
+            max-width: none !important;
+          }
+          .techgrid ul {
+            justify-content: flex-start !important;
+          }
+        }
+      `}</style>
     </div>
   );
 };
