@@ -15,9 +15,9 @@ const experiences = [
     location: 'Milton Keynes, UK',
     image: rbr,
     description: [
-      '',
+      '- Refactoring and developing internal CFD software tools in Python and C++.',
     ],
-    skills: ['C#', '.NET', 'Python'],
+    skills: ['C#', '.NET', 'Python', 'C++', 'CFD'],
   },
   {
     title: 'Aerodynamics Design Engineer Intern',
@@ -26,10 +26,10 @@ const experiences = [
     location: 'Remote',
     image: oilstainlabsimg,
     description: [
-      '▷ Designed underbody aero for HF-11 Hypercar through CFD analysis.',
-      '▷ Preprocessed geometry and independent mesh studies to balance detail and meshability.',
-      '▷ Validated CFD results (<5% deviation) with wind tunnel data.',
-      '▷ Generated technical reports on pressure, streamlines, and force data.',
+      '- Designed underbody aero for HF-11 Hypercar through CFD analysis.',
+      '- Preprocessed geometry and independent mesh studies to balance detail and meshability.',
+      '- Validated CFD results (<5% deviation) with wind tunnel data.',
+      '- Generated technical reports on pressure, streamlines, and force data.',
     ],
     skills: ['Ansys Fluent', 'Rhino', 'CFD', 'Wind Tunnel Validation'],
   },
