@@ -15,9 +15,9 @@ const experiences = [
     location: 'Milton Keynes, UK',
     image: rbr,
     description: [
-      '- Refactoring and developing internal CFD software tools in Python and C++.',
+      'Working in the aerodynamics subteam building high-throughput simulation pipelines, Python and C++ engineering tooling to build and automate CFD workflows, and services that process and visualise results at scale.'
     ],
-    skills: ['C#', '.NET', 'Python', 'C++', 'CFD'],
+    skills: ['C++', 'Python', 'Docker', 'Azure DevoOps', 'CFD', 'Linux'],
   },
   {
     title: 'Aerodynamics Design Engineer Intern',
@@ -26,10 +26,7 @@ const experiences = [
     location: 'Remote',
     image: oilstainlabsimg,
     description: [
-      '- Designed underbody aero for HF-11 Hypercar through CFD analysis.',
-      '- Preprocessed geometry and independent mesh studies to balance detail and meshability.',
-      '- Validated CFD results (<5% deviation) with wind tunnel data.',
-      '- Generated technical reports on pressure, streamlines, and force data.',
+      'Designed underbody aero for HF-11 Hypercar where I performed independent CFD mesh studies, validated CFD results with wind tunnel data and generated technical reports on my findings.',
     ],
     skills: ['Ansys Fluent', 'Rhino', 'CFD', 'Wind Tunnel Validation'],
   },
@@ -40,11 +37,9 @@ const experiences = [
     location: 'Hamilton, ON',
     image: lyriq,
     description: [
-      '- Automated CFD setup/post-processing with Python.',
-      '- Ran and validated multi-condition CFD simulations.',
-      '- Designed aero components in Siemens NX, resulting in 10% drag reduction.',
-      '- Validated control systems using CANape, Simulink, and AVL tools.',
-      '- Modeled suspension in Altair MotionView for design iterations.',
+      'Designed aero components for the Cadillac Lyriq, including running and validating multi-condition CFD simulations and automating CFD setup/post-processing.',
+      'Validated control systems using CANape, Simulink, and AVL tools.',
+      'Modeled suspension geometry and parameters in Altair MotionView for design iterations.',
     ],
     skills: ['Python', 'Ansys Fluent', 'Siemens NX', 'MATLAB Simulink', 'Altair MotionView', 'AVL', 'CANape'],
   },
@@ -55,11 +50,9 @@ const experiences = [
     location: 'Hamilton, ON',
     image: fsae,
     description: [
-      '- Designing aero components, including multi element rear wing, underbody and front wing.',
-      '- Ran and validating multi-condition CFD simulations.',
-      '- Developed genetic algorithms for optimal setups of aerodynamic components.',
+      'Developed genetic algorithms for optimal setups of aerodynamic components, where I was able to perform many multi-condition CFD studies on multi-element wing designs.',
     ],
-    skills: ['Python', 'OpenFOAM', 'Siemens NX'],
+    skills: ['Python', 'OpenFOAM', 'SolidWorks', 'CFD', 'Genetic Algorithms'],
   },
     {
     title: 'Race Telemetry Engineer Intern',
@@ -68,11 +61,7 @@ const experiences = [
     location: 'Toronto, ON',
     image: scalar,
     description: [
-      '- Built F1 telemetry platform using Quix, Kafka, Docker, and Kubernetes.',
-      '- Processed CANbus data in Python (50ms latency).',
-      '- Created real-time dashboard via Websockets for race engineers.',
-      '- Integrated Raspberry Pi with custom CANBus telemetry system.',
-      '- Developed hybrid controls in Simulink delivering 200+ HP.',
+      '- Built an F1 equivalent telemetry platform that processed and visualized race car statistics (via CANbus data) in real time, from hardware design and integration to data processing pipelines to remote telemetry dashboards for race engineers.',
     ],
     skills: ['Python', 'Kafka', 'Quix Cloud', 'Kubernetes', 'Docker', 'Websockets', 'CANbus', 'MQTT', 'MATLAB Simulink'],
   },
@@ -83,10 +72,9 @@ const experiences = [
     location: 'Hamilton, ON',
     image: lyriq,
     description: [
-      '- Redesigned rear subfloor for inverter and computer modules.',
-      '- Developed duct and thermal systems, reduced module temps by 16.6%.',
+      'Redesigned the rear subfloor for robust inverter and computer module installations, while ensuring proper thermal management via custom designed ducting system design and integration.'
     ],
-    skills: ['Siemens NX', 'FEA', 'Thermal Analysis', 'System Integration'],
+    skills: ['Siemens NX', 'FEA', 'Thermal Analysis', 'CFD', 'Design for Manufacturing'],
   },
 
 ];
