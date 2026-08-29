@@ -304,12 +304,13 @@ const Experience = () => {
                     <span
                       key={i}
                       style={{
-                        backgroundColor: 'var(--red-6)',
-                        color: 'white',
-                        padding: '0.35rem 0.75rem',
-                        borderRadius: '9999px',
-                        fontSize: '0.85rem',
-                        fontWeight: 500,
+                        background: 'rgba(127, 29, 29, 0.08)',
+                        color: '#7f1d1d',
+                        border: '1px solid rgba(127, 29, 29, 0.12)',
+                        padding: '0.38rem 0.7rem',
+                        borderRadius: '999px',
+                        fontSize: '0.8rem',
+                        fontWeight: 600,
                         fontFamily: 'Inter, system-ui, sans-serif',
                       }}
                     >
@@ -322,10 +323,19 @@ const Experience = () => {
               <Flex gap="3" mt="auto" justify="end">
                 <AlertDialog.Cancel>
                   <Button
+                    className="close-button"
                     style={{
-                      background: 'var(--red-8)',
-                      color: 'white',
+                      background: 'linear-gradient(135deg, #f3f4f6, #e5e7eb)',
+                      color: '#111827',
+                      transition: 'all 0.3s ease',
                       cursor: 'pointer',
+                      border: '1px solid rgba(17, 24, 39, 0.1)',
+                      borderRadius: '0.8rem',
+                      padding: '0.9rem 1.5rem',
+                      fontSize: '0.98rem',
+                      fontFamily: 'Inter, system-ui, sans-serif',
+                      fontWeight: 600,
+                      boxShadow: '0 8px 18px rgba(17, 24, 39, 0.06)',
                     }}
                   >
                     <Text style={{ fontFamily: 'Inter, system-ui, sans-serif', color: 'inherit' }}>Close</Text>
@@ -340,6 +350,17 @@ const Experience = () => {
       <style>{`
         .hover-scale:hover {
           transform: scale(1.05);
+        }
+
+        .close-button:hover {
+          background: linear-gradient(135deg, #f8fafc, #e5e7eb) !important;
+          transform: translateY(-1px);
+          box-shadow: 0 8px 16px rgba(17, 24, 39, 0.08) !important;
+        }
+
+        .close-button:active {
+          transform: translateY(0px);
+          box-shadow: 0 5px 10px rgba(17, 24, 39, 0.06) !important;
         }
       `}</style>
     </div>

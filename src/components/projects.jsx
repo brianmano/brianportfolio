@@ -171,9 +171,9 @@ const Projects = () => {
                     borderRadius: '1rem',
                     cursor: 'pointer',
                     display: 'grid',
-                    gridTemplateRows: 'auto auto auto', // Allow rows to auto size
+                    gridTemplateRows: 'auto auto auto',
                     width: '100%',
-                    minHeight: '240px', // Increased minHeight
+                    minHeight: '240px',
                     padding: '1rem',
                     gap: '0.5rem',
                     fontFamily: 'Inter, system-ui, sans-serif',
@@ -229,9 +229,9 @@ const Projects = () => {
                 className="project-title project-overlay-content"
                 as="div"
                 style={{
-                    fontSize: 'clamp(0.3rem, 0.8vw, 1.25rem)', // Reasonable clamp
+                    fontSize: 'clamp(0.3rem, 0.8vw, 1.25rem)',
                     fontWeight: 700,
-                    lineHeight: 1.4, // More breathing room
+                    lineHeight: 1.4,
                     overflowWrap: 'break-word',
                     wordBreak: 'break-word',
                 }}
@@ -243,7 +243,7 @@ const Projects = () => {
                 className="project-description"
                 as="div"
                 style={{
-                    fontSize: 'clamp(0.4rem, 0.6vw, 1rem)', // Adjusted clamp
+                    fontSize: 'clamp(0.4rem, 0.6vw, 1rem)',
                     opacity: 0.85,
                     marginTop: '0.25rem',
                     lineHeight: 1.5,
@@ -309,106 +309,136 @@ const Projects = () => {
                 <AlertDialog.Content
                 className="project-popup"
                 style={{
-                    maxWidth: 800,
+                    maxWidth: 840,
                     width: '90vw',
                     maxHeight: '95vh',
                     padding: '0',
-                    borderRadius: '1rem',
-                    backgroundColor: '#eeeeee',
-                    color: '#000',
+                    borderRadius: '1.2rem',
+                    background: 'linear-gradient(135deg, rgba(255,255,255,0.98), rgba(244,244,245,0.98))',
+                    color: '#111827',
                     overflow: 'hidden',
                     display: 'flex',
                     flexDirection: 'column',
                     position: 'relative',
-                    backgroundImage: `url(${project.image})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-
+                    border: '1px solid rgba(17, 24, 39, 0.08)',
+                    boxShadow: '0 24px 60px rgba(17, 24, 39, 0.16)',
                 }}
                 >
                 <div style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    background: 'rgba(0, 0, 0, 0.6)',
-                    zIndex: 1,
-                }}></div>
+                    position: 'relative',
+                    padding: '1.25rem 1.75rem 1rem',
+                    background: 'linear-gradient(135deg, #2d0b12 0%, #651417 32%, #9f1f25 100%)',
+                    color: 'white',
+                    borderBottom: '1px solid rgba(255,255,255,0.12)',
+                }}>
+                    <AlertDialog.Title
+                        style={{
+                        fontFamily: 'Inter, system-ui, sans-serif',
+                        fontWeight: 700,
+                        fontSize: 'clamp(1.5rem, 2vw, 2.2rem)',
+                        margin: 0,
+                        letterSpacing: '-0.03em',
+                        color: '#ffffff',
+                        background: 'transparent',
+                        }}
+                    >
+                        {project.title}
+                    </AlertDialog.Title>
+                </div>
 
                 <div style={{
                     position: 'relative',
                     zIndex: 2,
-                    padding: '2rem',
+                    padding: '1.5rem 1.75rem 1.75rem',
                     display: 'flex',
                     flexDirection: 'column',
                     height: '100%',
-                    color: 'white',
+                    color: '#111827',
                 }}>
-                <AlertDialog.Title
-                    style={{
-                    fontFamily: 'Inter, system-ui, sans-serif',
-                    fontWeight: 700,
-                    fontSize: '2rem',
-                    marginBottom: '1rem',
-                    }}
-                >
-                    {project.title}
-                </AlertDialog.Title>
+                <div style={{
+                    display: 'flex',
+                    gap: '1.2rem',
+                    alignItems: 'center',
+                    marginBottom: '1.25rem',
+                    flexWrap: 'wrap',
+                }}>
+                    <div style={{
+                        width: '180px',
+                        height: '120px',
+                        borderRadius: '0.9rem',
+                        overflow: 'hidden',
+                        flexShrink: 0,
+                        border: '1px solid rgba(17, 24, 39, 0.08)',
+                        background: '#f3f4f6',
+                        boxShadow: '0 10px 22px rgba(17, 24, 39, 0.08)',
+                    }}>
+                        <img
+                            src={project.image}
+                            alt={project.title}
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                                display: 'block',
+                            }}
+                        />
+                    </div>
 
-                <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
-                    {project.tag.split(',').map((tagItem, tagIndex) => (
-                    <Badge style={{
-                        fontFamily: 'Inter, system-ui, sans-serif',
-                        background: 'rgba(255, 255, 255, 0.2)',
-                        color: 'white',
-                        border: '1px solid rgba(255, 255, 255, 0.3)',
-                        fontSize: '0.9rem',
-                        padding: '0.4rem 0.8rem',
-                    }} key={tagIndex} color="gray" variant="soft">
-                        {tagItem.trim()}
-                    </Badge>
-                    ))}
+                    <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', flex: 1 }}>
+                        {project.tag.split(',').map((tagItem, tagIndex) => (
+                        <Badge style={{
+                            fontFamily: 'Inter, system-ui, sans-serif',
+                            background: 'rgba(127, 29, 29, 0.08)',
+                            color: '#7f1d1d',
+                            border: '1px solid rgba(127, 29, 29, 0.12)',
+                            fontSize: '0.8rem',
+                            padding: '0.38rem 0.7rem',
+                            fontWeight: 600,
+                            borderRadius: '999px',
+                        }} key={tagIndex} color="gray" variant="soft">
+                            {tagItem.trim()}
+                        </Badge>
+                        ))}
+                    </div>
                 </div>
 
                 <Text
                     style={{
                     fontFamily: 'Inter, system-ui, sans-serif',
-                    fontSize: '1.1rem',
-                    lineHeight: 1.6,
+                    fontSize: '1.04rem',
+                    lineHeight: 1.7,
                     marginBottom: '2rem',
                     flexGrow: 1,
+                    color: '#374151',
                     }}
                 >
                     {project.description}
                 </Text>
 
-                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'space-between', alignItems: 'center' }}>
+                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
                     <a
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{
-                        textDecoration: 'none',
-                        }}
+                        style={{ textDecoration: 'none' }}
                     >
                         <Button
                         className="project-details-button"
                         style={{
-                            background: 'linear-gradient(135deg, #92400e, #78350f)',
+                            background: 'linear-gradient(135deg, #2d0b12 0%, #651417 32%, #9f1f25 100%)',
                             color: 'white',
                             display: 'flex',
                             gap: '0.5rem',
-                            padding: '1rem 2rem',
-                            fontSize: '1.1rem',
+                            padding: '0.9rem 1.5rem',
+                            fontSize: '0.98rem',
                             alignItems: 'center',
                             fontFamily: 'Inter, system-ui, sans-serif',
                             fontWeight: 600,
                             transition: 'all 0.3s ease',
                             cursor: 'pointer',
                             border: 'none',
-                            borderRadius: '0.75rem',
-                            boxShadow: '0 0 20px rgba(146, 64, 14, 0.5), 0 0 40px rgba(146, 64, 14, 0.3)',
+                            borderRadius: '0.8rem',
+                            boxShadow: '0 12px 28px rgba(127, 29, 29, 0.22)',
                         }}
                         >
                         <LayersIcon />
@@ -420,17 +450,17 @@ const Projects = () => {
                     <Button
                         className="close-button"
                         style={{
-                        background: 'linear-gradient(135deg, #7f1d1d, #991b1b)',
-                        color: 'white',
+                        background: 'linear-gradient(135deg, #f3f4f6, #e5e7eb)',
+                        color: '#111827',
                         transition: 'all 0.3s ease',
                         cursor: 'pointer',
-                        border: 'none',
-                        borderRadius: '0.75rem',
-                        padding: '1rem 2rem',
-                        fontSize: '1.1rem',
+                        border: '1px solid rgba(17, 24, 39, 0.1)',
+                        borderRadius: '0.8rem',
+                        padding: '0.9rem 1.5rem',
+                        fontSize: '0.98rem',
                         fontFamily: 'Inter, system-ui, sans-serif',
                         fontWeight: 600,
-                        boxShadow: '0 0 20px rgba(127, 29, 29, 0.5), 0 0 40px rgba(127, 29, 29, 0.3)',
+                        boxShadow: '0 8px 18px rgba(17, 24, 39, 0.06)',
                         }}
                     >
                         Close
@@ -461,28 +491,27 @@ const Projects = () => {
             }
         }
 
-        /* Project Details Button Hover Effect */
+        /* Project Popup Button Hover Effect */
         .project-details-button:hover {
-            background: linear-gradient(135deg, #a16207, #92400e) !important;
-            transform: translateY(-3px);
-            box-shadow: 0 0 30px rgba(146, 64, 14, 0.8), 0 0 60px rgba(146, 64, 14, 0.5), 0 0 90px rgba(146, 64, 14, 0.3) !important;
+            background: linear-gradient(135deg, #3c0d16 0%, #7f1d1d 38%, #9f1f25 100%) !important;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 18px rgba(127, 29, 29, 0.18) !important;
         }
 
         .project-details-button:active {
             transform: translateY(0px);
-            box-shadow: 0 0 20px rgba(146, 64, 14, 0.5), 0 0 40px rgba(146, 64, 14, 0.3) !important;
+            box-shadow: 0 6px 12px rgba(127, 29, 29, 0.14) !important;
         }
 
-        /* Close Button Hover Effect */
         .close-button:hover {
-            background: linear-gradient(135deg, #991b1b, #b91c1c) !important;
-            transform: translateY(-3px);
-            box-shadow: 0 0 30px rgba(127, 29, 29, 0.8), 0 0 60px rgba(127, 29, 29, 0.5), 0 0 90px rgba(127, 29, 29, 0.3) !important;
+            background: linear-gradient(135deg, #f8fafc, #e5e7eb) !important;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 16px rgba(17, 24, 39, 0.08) !important;
         }
 
         .close-button:active {
             transform: translateY(0px);
-            box-shadow: 0 0 20px rgba(127, 29, 29, 0.5), 0 0 40px rgba(127, 29, 29, 0.3) !important;
+            box-shadow: 0 5px 10px rgba(17, 24, 39, 0.06) !important;
         }
 
         /* Project Popup Desktop Enhancements */
