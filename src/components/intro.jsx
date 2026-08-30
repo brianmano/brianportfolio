@@ -126,7 +126,7 @@ const Intro = () => {
             as="span"
             wrap="pretty"
           >
-            Incoming SWE @ Red Bull Racing
+            Aerodynamics SWE IP @ Red Bull Racing
           </Text>
         </Badge>
 
