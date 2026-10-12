@@ -15,7 +15,7 @@ const experiences = [
     location: 'Milton Keynes, UK',
     image: rbr,
     description: [
-      'Working in the aerodynamics subteam building high-throughput simulation pipelines, Python and C++ engineering tooling to build and automate CFD workflows, and services that process and visualise results at scale.'
+      'Working alongside the aerodynamics subteam building high-throughput simulation pipelines, engineering tooling to build and automate CFD workflows, and services that process and visualise results at scale.'
     ],
     skills: ['C++', 'Python', 'Docker', 'Azure DevoOps', 'CFD', 'Linux'],
   },

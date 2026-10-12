@@ -126,7 +126,7 @@ const Intro = () => {
             as="span"
             wrap="pretty"
           >
-            Aerodynamics SWE IP @ Red Bull Racing
+            Software Engineer ISP @ Red Bull Racing
           </Text>
         </Badge>
 

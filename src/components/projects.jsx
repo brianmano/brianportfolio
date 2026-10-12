@@ -34,12 +34,12 @@ const projects = [
     link: 'https://drive.google.com/file/d/1Awff38ZsXIIIJX95C6_uSioEuL-ADvmQ/view?usp=sharing/'
   },
   {
-    title: 'Cadillac Lyriq Aero Package',
-    image: lyriq,
+    title: 'CPU Heatsink Design',
+    image: heatsink,
     description:
-      'Designed aero components and validated drag reduction through CFD. Developed automation scripts to increase efficiency in the CFD workflow.',
-    tag: 'Siemens NX, Ansys Fluent, CFD, Python, Aerodynamic Design',
-    link: 'https://www.macecocar.ca/'
+      'Designed a custom CPU Heatsink using natural convection to reduce maximum temperatures compared to a factory design by 33%.',
+    tag: 'Fusion360, Thermal Analysis, Material Design, Manufacturing',
+    link: 'https://drive.google.com/file/d/1i6HKiGWrDh3BUJud11zgsxfElHyp_LHL/view?usp=sharing', 
   },
   {
     title: 'Formula Student Aero Genetic Algorithm',
@@ -48,6 +48,22 @@ const projects = [
       'Developing genetic algorithms to automate and optimize aero component setups, including AoA, position, and scale.',
     tag: 'OpenFOAM, Python, CFD, Genetic Programming',
     link: 'https://github.com/brianmano/openfoamautomation'
+  },
+  {
+    title: 'LeetBuddy',
+    image: leetbuddy,
+    description:
+      'Developed a Google Chrome Extension (3000+ active users) leveraging Generative AI to provide real-time, context-aware support for LeetCode problems to personalize software interview preparation.',
+    tag: 'React, Tailwind, Express.js, Generative AI, Redis, Docker',
+    link: 'https://chromewebstore.google.com/detail/leetbuddy-your-ai-powered/nlemdecocfoaimdbfgpilfgdmcllhphn'
+  },
+  {
+    title: 'Cadillac Lyriq Aero Package',
+    image: lyriq,
+    description:
+      'Designed aero components and validated drag reduction through CFD. Developed automation scripts to increase efficiency in the CFD workflow.',
+    tag: 'Siemens NX, Ansys Fluent, CFD, Python, Aerodynamic Design',
+    link: 'https://www.macecocar.ca/'
   },
     {
     title: 'Cadillac Lyriq Internal Thermal System',
@@ -58,7 +74,7 @@ const projects = [
     link: 'https://drive.google.com/file/d/1MycHKIV_fjeRdH1LXnZ22IIs5Ie6UfUq/view?usp=sharing'
   },
 
-        {
+  {
     title: 'EcoLift Robotic Spotter',
     image: ecolift,
     description:
@@ -66,24 +82,7 @@ const projects = [
     tag: 'SolidWorks, FEA, Manufacturing, Python, React, WebSocket',
     link: 'https://github.com/luciancheng/EcoLift'
   },
-
-        {
-    title: 'CPU Heatsink Design',
-    image: heatsink,
-    description:
-      'Designed a custom CPU Heatsink using natural convection to reduce maximum temperatures compared to a factory design by 33%.',
-    tag: 'Fusion360, Thermal Analysis, Material Design, Manufacturing',
-    link: 'https://drive.google.com/file/d/1i6HKiGWrDh3BUJud11zgsxfElHyp_LHL/view?usp=sharing', 
-  },
-    {
-    title: 'LeetBuddy',
-    image: leetbuddy,
-    description:
-      'Developed a Google Chrome Extension (3000+ active users) leveraging Generative AI to provide real-time, context-aware support for LeetCode problems to personalize software interview preparation.',
-    tag: 'React, Tailwind, Express.js, Generative AI, Redis, Docker',
-    link: 'https://chromewebstore.google.com/detail/leetbuddy-your-ai-powered/nlemdecocfoaimdbfgpilfgdmcllhphn'
-  },
-        {
+  {
     title: 'Cadillac Lyriq Control System Validation & Fault Analysis',
     image: lyriqcals,
     description:
@@ -91,7 +90,7 @@ const projects = [
     tag: 'Matlab Simulink, CANApe, AVL',
     link: 'https://www.macecocar.ca/'
   },
-      {
+  {
     title: 'Pacemaker Project',
     image: pacemaker,
     description:

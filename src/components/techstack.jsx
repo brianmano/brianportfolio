@@ -80,8 +80,8 @@ const TechStack = () => {
         </Text>
         <ul style={listStyle}>
           {[
-            'Ansys Fluent', 'OpenFOAM', 'Altair HyperMesh', 'Altair MotionView',
-            'Siemens NX', 'Rhino', 'CATIA', 'Paraview', 'Fusion 360', 'Inventor', 'SolidWorks',
+            'Ansys Fluent', 'OpenFOAM', 'Siemens NX', 'SolidWorks', 'Altair MotionView',
+            'Fusion 360', 'Inventor', 'Rhino'
           ].map((tech, idx) => (
             // The 'gap' property on <ul> now handles spacing, so marginBottom is removed.
             <li key={idx}>
@@ -111,8 +111,8 @@ const TechStack = () => {
         </Text>
         <ul style={listStyle}>
           {[
-            'Python', 'C', 'C#', 'C++', 'Java', 'CSS', 'HTML', 'JavaScript',
-            'TypeScript', 'SQL', 'Matlab', 'VBA',
+            'Python', 'C++', 'C#', 'C', 'CSS', 'HTML', 'JavaScript',
+            'TypeScript', 'SQL', 'MATLAB'
           ].map((lang, idx) => (
             <li key={idx}>
               <Badge className="tech-badge" style={{ ...badgeStyle, ...badgeFixedWidth }} variant="soft">
@@ -141,8 +141,8 @@ const TechStack = () => {
         </Text>
         <ul style={listStyle}>
           {[
-            'AVL', 'CANape', '.NET', 'Matlab Simulink', 'Apache Kafka', 'AWS (S3)',
-            'Azure', 'CANBus', 'Docker', 'Git', 'Kubernetes', 'Linux', 'WPF',
+            'Docker', '.NET', 'Azure DevOps', 'Git', 'Kubernetes', 'Linux', 'Apache Kafka', 'CANBus', 
+            'AVL', 'CANape', 'MATLAB Simulink', 'WPF',
           ].map((tool, idx) => (
             <li key={idx}>
               <Badge className="tech-badge" style={{ ...badgeStyle, ...badgeFixedWidth }} variant="soft">
