@@ -42,7 +42,7 @@ const projects = [
     link: 'https://drive.google.com/file/d/1i6HKiGWrDh3BUJud11zgsxfElHyp_LHL/view?usp=sharing', 
   },
   {
-    title: 'Formula Student Aero Genetic Algorithm',
+    title: 'Aerodynamic Improvement Genetic Algorithm',
     image: fsae,
     description:
       'Developing genetic algorithms to automate and optimize aero component setups, including AoA, position, and scale.',
@@ -56,6 +56,14 @@ const projects = [
       'Developed a Google Chrome Extension (3000+ active users) leveraging Generative AI to provide real-time, context-aware support for LeetCode problems to personalize software interview preparation.',
     tag: 'React, Tailwind, Express.js, Generative AI, Redis, Docker',
     link: 'https://chromewebstore.google.com/detail/leetbuddy-your-ai-powered/nlemdecocfoaimdbfgpilfgdmcllhphn'
+  },
+  {
+    title: 'EcoLift Robotic Spotter',
+    image: ecolift,
+    description:
+      'An automatic robotic spotter that integrates software, electrical, and mechanical components to detect exercising failures and provide safety assistance to the user.',
+    tag: 'SolidWorks, FEA, Manufacturing, Python, React, WebSocket',
+    link: 'https://github.com/luciancheng/EcoLift'
   },
   {
     title: 'Cadillac Lyriq Aero Package',
@@ -72,15 +80,6 @@ const projects = [
       'Designed and integrated an internal thermal system, decreasing ambient temperatures of rear computer modules. Validated through thermal fluid studies.',
     tag: 'Siemens NX, Thermal Fluids',
     link: 'https://drive.google.com/file/d/1MycHKIV_fjeRdH1LXnZ22IIs5Ie6UfUq/view?usp=sharing'
-  },
-
-  {
-    title: 'EcoLift Robotic Spotter',
-    image: ecolift,
-    description:
-      'An automatic robotic spotter that integrates software, electrical, and mechanical components to detect exercising failures and provide safety assistance to the user.',
-    tag: 'SolidWorks, FEA, Manufacturing, Python, React, WebSocket',
-    link: 'https://github.com/luciancheng/EcoLift'
   },
   {
     title: 'Cadillac Lyriq Control System Validation & Fault Analysis',
